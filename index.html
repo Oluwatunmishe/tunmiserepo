@@ -8,21 +8,185 @@
   </head>
 
   <body>
-    <header class="main-header">
-      <h1 class="title">LA TV Shows</h1>
-    </header>
-    <div id="card-container"></div>
-    <div class="card" style="display: none">
-      <div class="card-content">
-        <h2>TV Show Title</h2>
-        <img src="" alt="TV Show Poster" />
-        <ul>
-          <li>Bullet Point 1</li>
-          <li>Bullet Point 2</li>
-          <li>Bullet Point 3</li>
-        </ul>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hope for Tomorrow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <container>
+
+    <header>
+        <div class="logo">Teckies</div>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#mission">Our Mission</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+      
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Slick, Clean, Purpose-Driven</h1>
+          <p>Empowering kids with no access to education, technology or the internet.</p>
+          <a href="#about" class="cta-btn">Learn More</a>
+        </div>
+      </section>
+    </container>
+
+
+
+
+    <section id="goals-vision" class="goals-vision-section">
+        <h2>🌟 Our Vision & Goals</h2>
+        <div class="gv-container">
+          <div class="gv-card">
+            <h3>Our Vision</h3>
+            <p>To create a world where every child, regardless of background or location, has equal access to quality education, technology, and digital opportunities — unlocking their potential to shape a brighter future.</p>
+          </div>
+          <div class="gv-card">
+            <h3>Our Goals</h3>
+            <ul>
+              <li>📱 Distribute 500+ devices by 2026.</li>
+              <li>🏫 Build 10 digital learning centers in underserved regions.</li>
+              <li>💻 Train 1000+ children in basic computer and coding skills.</li>
+              <li>🤝 Partner with schools and global volunteers.</li>
+              <li>🎉 Host community tech literacy events yearly.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      
+
+
+      <impact id="impact1">
+        <h1 style="text-align: center;" id="t1">How We Work</h1> 
+        <p style="text-align: center;" id="p1">Through advocacy, education, information and research, we strive to build a more powerful and politically engaged nonprofit network across Africa.</p>
+     </impact>
+
+    <section class="cards-section">
+        <div class="card">
+
+          <h3>Success Story</h3>
+          <p>Your donation powers education, technology access, and brighter futures for kids in need.</p>
+          <a href="#">Read More →</a>
+        </div>
+      
+        <div class="card">
+          
+          <h3>Our Vision</h3>
+          <p>Reach 300+ kids 📚 <br>Create learning centers 🏫 <br>Donate 50+ laptops💻 50+ </p>
+        </div>
+      
+        <div class="card">
+            
+            <section id="mission">
+                <h2 style="color: #fff;">Our Mission</h2>
+                <ul >
+                  <li id="mission_list">Provide digital devices and internet access to remote communities.</li>
+                  <li id="mission_list">Create learning centers and community programs for children.</li>
+                  <li id="mission_list">Collaborate with volunteers and educators globally.</li>
+                </ul>
+            </section>
+        </div>
+        <div class="card">
+            
+          <section id="mission">
+              <h2 style="color: #fff;">Chromebook Donation</h2>
+              <ul >
+                <li id="mission_list">A durable laptop for students in rural schools. 25 needed in 2025.</li>
+                <li id="mission_list">Location: Ogun State, Nigeria</li>
+                <li id="mission_list">Type: Device</li>
+                
+
+
+
+
+
+
+
+
+              </ul>
+          </section>
       </div>
+      
+      </section>
+      
+
+  <section id="aboutt" >
+    <h1 style="text-align: center;">About Us & Our Story </h1>
+    <p>We are a non-profit dedicated to providing resources, technology, and educational opportunities to children in underserved communities with no access to schooling or the internet.</p>
+
+    <p  id="p1">Teckies was founded to address a digital divide affecting millions of children across Africa. Many lack access to the internet, modern education tools, and basic digital literacy. We believe every child deserves the opportunity to thrive in a connected world.
+      We want to empower 1,000+ kids with access to technology by 2026.
+      Build community learning centers in underserved areas.
+      Provide digital literacy training for youth and educators.</p>
+
+    
+    
+    
+    <p  id="p1">
+      </p>
+    
+    <p>We envision a future where every child, no matter where they live, has equal access to quality education and digital tools, enabling them to participate fully in our global digital economy.</p>
+  </section>
+
+ 
+
+  <select id="sortOption" onchange="sortCatalog()">
+    <option value="none">Sort By</option>
+    <option value="nameAsc">Name (A-Z)</option>
+    <option value="nameDesc">Name (Z-A)</option>
+  </select>
+
+
+
+
+
+  <section id="catalog">
+    <h2 style="text-align: center; margin-top: 3rem;">📚 Tech Access Catalog</h2>
+    <div class="controls" style="text-align: center; margin: 20px 0;">
+      <input type="text" id="searchInput" placeholder="Search by name..." onkeyup="searchItems()" style="padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+      <select id="typeFilter" onchange="filterByType()" style="padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+        <option value="All">All Types</option>
+        <option value="Device">Device</option>
+        <option value="Program">Program</option>
+        <option value="Success Story">Success Story</option>
+      </select>
     </div>
+  
+    <div id="catalog-grid" class="cards-section"></div>
+  </section>
+  
+
+
+
+  <section class="contact-form-section">
+    <div class="form-container">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Full Name" required>
+        <input type="email" placeholder="Your Email Address" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+
+
+  <footer>
+    <p style="text-align: center;">&copy; 2025 techies. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
+
+
     <div class="footer">
       <button onclick="quoteAlert();">Get A Quote!</button>
       <button onclick="removeLastCard();">Remove A Card!</button>
